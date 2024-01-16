@@ -28,9 +28,11 @@ window.addEventListener('DOMContentLoaded', () => {
     if (e.target.checked) {
       document.documentElement.setAttribute('data-theme', 'dark');
       modeText.innerHTML = 'Dark Mode';
+      localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.setAttribute('data-theme', 'light');
       modeText.innerHTML = 'Light Mode';
+      localStorage.setItem('theme', 'light');
     }
   }
 
@@ -67,6 +69,16 @@ window.addEventListener('DOMContentLoaded', () => {
     taskInput.placeholder = randomPhrase;
   }
 
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'dark') {
+      modeText.innerHTML = 'Dark Mode';
+      toggleSwitch.checked = true;
+    }
+  }
+
   showTasks();
 
   // event listeners
@@ -79,7 +91,6 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   toDoList.addEventListener('click', function (e) {
-    console.log(e.target);
     if (e.target.tagName === 'LI') {
       e.target.classList.toggle('checked');
       saveData();
