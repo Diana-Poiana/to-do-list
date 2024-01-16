@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="theme__toggle">
+      <span class="theme__text">
+        Light Mode
+      </span>
+      <label class="theme__switch">
+        <input class="theme__checkbox" type="checkbox">
+        <span class="theme__slider round"></span>
+      </label>
+    </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="list__container">
+      <div class="list__inner">
+        <div class="list__top">
+          <h1 class="list__name">
+            To-Do List
+          </h1>
+          <img class="list__png" src="to-do-icon.png" alt="to do list">
+        </div>
+        <input class="list__input" type="text" placeholder="Type something to start...">
+        <button class="list__button" type="button">
+          Add
+        </button>
+        <ul class="list__to-do">
+        </ul>
+      </div>
+    </div>
+  </main>
+  <script src="https://kit.fontawesome.com/4d271c8471.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
