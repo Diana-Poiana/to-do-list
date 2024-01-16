@@ -12,7 +12,7 @@
 }
 
 body {
-  color: var(--font-color);
+  color: #000000;
   font-family: 'Inconsolata', monospace;
   font-size: 18px;
   font-weight: 400;
@@ -22,7 +22,7 @@ body {
 }
 
 .header {
-  color: var(--secondary-font-color);
+  color: var( --font-color);
   position: relative;
   text-align: right;
   font-size: 28px;
@@ -118,10 +118,6 @@ theme__checkbox:focus + .slider {
   margin-right: 15px;
 }
 
-.list__to-do {
-  color: #000000;
-}
-
 .list__input {
   padding: 15px;
   max-width: 80%;
@@ -141,7 +137,6 @@ theme__checkbox:focus + .slider {
 }
 
 .list__button {
-  color: #000000;
   margin-left: -10px;
   padding: 15px;
   max-width: 20%;
